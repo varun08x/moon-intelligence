@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+moonnv/
+.env
+backend/.env
+backend/uploads/
+backend/outputs/
+.venv/
+
+# Node
+moon-frontend/node_modules/
+moon-frontend/.env
+
+# Misc
+.DS_Store
