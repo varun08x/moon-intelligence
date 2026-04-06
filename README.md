@@ -1,13 +1,6 @@
 # Lunar Forge: Moon Intelligence
 Lunar Forge is a web + ML project that detects lunar surface features (craters, boulders) from imagery and visualizes results in a Three.js UI. It combines a FastAPI backend (SAM3 segmentation + MiDaS depth) with a Vite + React frontend.
 
-## Demo
-- Frontend: (add your deployed URL)
-- Backend API: (add your deployed URL)
-
-## Demo GIF
-Add a short screen recording or GIF here to quickly show the upload -> detection -> output flow.
-
 ## Key Features
 - Image/video upload and AI inference
 - Annotated output with detections
@@ -72,33 +65,6 @@ The backend exposes:
 ```
 GET /health
 ```
-
-## One-Click Deploy
-### Frontend (Vercel)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-
-### Backend (Render)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
-### Manual Steps (Recommended)
-1. **Render (backend)**
-   - Create a new Web Service pointing at the repo
-   - Root directory: `backend`
-   - Build command: `pip install -r requirements.txt`
-   - Start command: `uvicorn main:app --host 0.0.0.0 --port 8000`
-   - Add env vars from `backend/.env.example`
-2. **Vercel (frontend)**
-   - Import repo
-   - Root directory: `moon-frontend`
-   - Build command: `npm run build`
-   - Output: `dist`
-   - Env var: `VITE_API_URL` = Render backend URL
-
-## Deployment Notes
-- **Frontend**: Vercel (set `VITE_API_URL` to your backend URL)
-- **Backend**: Render
-  - Add env vars from `.env.example`
-  - Ensure a persistent disk or object storage for `/uploads` and `/outputs` if needed
 
 ## Project Structure
 ```
